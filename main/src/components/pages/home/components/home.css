@@ -1,0 +1,39 @@
+.container{
+    margin-top: 80px;
+}
+.container h1{
+    font-size: 70px;
+    font-weight:bold;
+}
+p{
+    font-size: 22px;
+}
+
+.hero-pic {
+  background-image: url('./images/LandingPreview.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 420px;
+  border-radius: 20px ;
+}
+
+@media (max-width: 990px) {
+  .home-row {
+    flex-direction: column !important;
+  }
+
+  /* make every column full width (override bootstrap col rules) */
+  .home-row > .col-6,
+  .home-row > .text-col,
+  .home-row > .hero-pic,
+  .home-row > .col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* ensure ordering (text then hero) */
+  .text-col { order: 1 !important; }
+  .hero-pic { order: 2 !important; min-height: 260px; } /* smaller height on narrow screens */
+}
+
