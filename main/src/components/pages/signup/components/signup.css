@@ -1,16 +1,15 @@
 .container {
   margin-top: 80px;
 }
+.login-welcome{
+  translate: -20px;
+}
 .container h1 {
-  font-size: 50px;
+  font-size: 35px;
   font-weight: bold;
 }
 p {
   font-size: 20px;
-}
-.container h3{
-  font-size: 18px;
-  font-weight: bold;
 }
 .login-welcome {
   width: 540px;
@@ -29,3 +28,4 @@ p {
 .form-description{
   font-size: 17px;
 }
+

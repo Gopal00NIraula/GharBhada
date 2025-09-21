@@ -2,6 +2,10 @@ import React from "react";
 import './components/login.css';
 import logo from '../../../logo.svg'
 import login from './components/images/login.svg'
+import loginwhite from './components/images/loginwhite.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faComment, faComments, faHouse, faStar } from "@fortawesome/free-regular-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Login() {
   return (
@@ -9,13 +13,7 @@ function Login() {
       <div className="d-flex flex-column mb-3 login-welcome">
         <div className="p-2 d-flex justify-content-center">
           <div className="p-2">
-            <img
-              src={logo}
-              width="60"
-              height="60"
-              className="d-inline-block align-top mx-2"
-              alt="GharBhada logo"
-            />
+            <FontAwesomeIcon icon={faHouse} size="3x" className="text-primary" />
           </div>
         </div>
         <div className="d-flex justify-content-center">
@@ -29,13 +27,7 @@ function Login() {
               <h3>Why choose GharBhada?</h3>
               <div className="d-flex flex-fill">
                 <div className="p-2 features-svg">
-                  <img
-                    src={logo}
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top mx-2"
-                    alt="GharBhada logo"
-                  />
+                  <FontAwesomeIcon icon={faSearch} size="lg" className="text-primary" />
                 </div>
                 <div className="p-2 d-flex flex-column">
                   <p className="heading">Smart Property Search</p>
@@ -46,52 +38,34 @@ function Login() {
               </div>
               <div className="d-flex flex-fill">
                 <div className="p-2 features-svg">
-                  <img
-                    src={logo}
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top mx-2"
-                    alt="GharBhada logo"
-                  />
+                  <FontAwesomeIcon icon={faCheckCircle} size="lg" className="text-primary" />
                 </div>
                 <div className="p-2 d-flex flex-column">
-                  <p className="heading">Smart Property Search</p>
+                  <p className="heading">Verified Listings</p>
                   <p className="description text-muted">
-                    Find Properties with advanced filters and location-based search
+                    All properties are verified for authenticity and accuracy
                   </p>
                 </div>
               </div>
               <div className="d-flex flex-fill">
                 <div className="p-2 features-svg">
-                  <img
-                    src={logo}
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top mx-2"
-                    alt="GharBhada logo"
-                  />
+                  <FontAwesomeIcon icon={faComments} size="lg" className="text-primary" />
                 </div>
                 <div className="p-2 d-flex flex-column">
-                  <p className="heading">Smart Property Search</p>
+                  <p className="heading">Direct Communication</p>
                   <p className="description text-muted">
-                    Find Properties with advanced filters and location-based search
+                    Connect directly with property owners and schedule visits
                   </p>
                 </div>
               </div>
               <div className="d-flex flex-fill">
                 <div className="p-2 features-svg">
-                  <img
-                    src={logo}
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top mx-2"
-                    alt="GharBhada logo"
-                  />
+                  <FontAwesomeIcon icon={faStar} size="lg" className="text-primary" />
                 </div>
                 <div className="p-2 d-flex flex-column">
                   <p className="heading">Smart Property Search</p>
                   <p className="description text-muted">
-                    Find Properties with advanced filters and location-based search
+                    Read reviews and ratings from previous tenants
                   </p>
                 </div>
               </div>
@@ -116,6 +90,31 @@ function Login() {
             Sign in to your GharBhada account
           </p>
         </div>
+        <form>
+          <div class="form-group p-2">
+            <label for="email">Email <span className="text-danger">*</span></label>
+            <input type="email" className="form-control" name="email" placeholder="Ex. johndoe@xyz.com"/>
+          </div>
+          <div class="form-group p-2">
+            <label for="password">Confirm Password<span className="text-danger">*</span></label>
+            <input type="password" className="form-control" name="password" placeholder="Please enter a password"/>
+          </div>
+          <div class="form-group p-2">
+            <input type="checkbox" className="form-check-input" value="1"/>
+            <label className="px-2">Remember me</label>
+          </div>
+          <div class="form-group p-2 d-flex">
+            <button type="submit" className="btn btn-primary flex-fill">
+              <img
+              src={loginwhite}
+              width="30"
+              height="30"
+              className="d-inline-block align-top mx-2"
+              alt="GharBhada logo"
+            /> Sign in
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

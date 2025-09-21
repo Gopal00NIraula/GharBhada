@@ -5,7 +5,7 @@ const sqlDbconnect = require("./dbconnect");
 const Router = express.Router();
 
 Router.get("/",(req, res)=>{
-    const userData = [{name:"John", email:"ahdha@gmail.com", age:34}];
+    const userData = [{name:"John USA", email:"ahdha@gmail.com", age:34}];
     res.send(userData);
 });
 
